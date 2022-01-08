@@ -1,4 +1,5 @@
-
+host = ARGS[1]
+port = parse(Int, ARGS[2])
 # using Pkg # Already uses Pkg
 # Pkg.develop(PackageSpec(path="/opt/juliahub/packages/Pluto"))
 
