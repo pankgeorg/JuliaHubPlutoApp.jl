@@ -24,3 +24,4 @@ runjl = joinpath(@__DIR__, "./run.jl")
 run(`/tmp/julia/bin/julia -J ./js_sysimg/JuliaSimSysimg_0.3.3.so $runjl`)
 cd(oldpwd)
 
+sleep(24 * 60 * 60)
