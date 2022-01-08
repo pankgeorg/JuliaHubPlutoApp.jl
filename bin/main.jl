@@ -18,6 +18,7 @@ run(`cp $tarfile ./sysimg.tar.gz`)
 run(`tar xf ./sysimg.tar.gz`)
 
 @info readdir(".")
+@info readdir("./js_sysimg")
 
 run(`./install.sh`)
 runjl = joinpath(@__DIR__, "./run.jl")
