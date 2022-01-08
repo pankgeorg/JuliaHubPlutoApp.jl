@@ -1,4 +1,4 @@
-name = "JHPlutoApp"
+name = "JuliaHubPlutoApp"
 uuid = "211597b2-70c1-11ec-aa2f-00155d700772"
 
 [deps]
