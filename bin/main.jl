@@ -11,15 +11,12 @@ headers = Dict("Authorization" => "Bearer $(APIKEY)")
 # progress = (b,a) -> print("\r$(a/b)%                                           ")
 # tarfile = joinpath(@__DIR__, "../JuliaSimSysimg_0.3.3.tar.gz")
 tarfile = Downloads.download(ARTIFACT_URL; headers=headers)
-@info tarfile
+@info "Downloaded sysimg tar into $tarfile"
 oldpwd = pwd()
 cwd = @__DIR__
 cd(cwd)
 run(`cp $tarfile ./sysimg.tar.gz`)
 run(`tar xf ./sysimg.tar.gz`)
-
-@info readdir(".")
-@info readdir("./js_sysimg")
 
 run(`./install.sh $cwd`)
 runjl = joinpath(@__DIR__, "./run.jl")
