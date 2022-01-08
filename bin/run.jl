@@ -526,7 +526,7 @@ pluto_server_options = Pluto.Configuration.from_flat_kwargs(;
     disable_writing_notebook_files = true,
     require_secret_for_open_links = false,
     require_secret_for_access = false,
-    injected_javascript_data_url = env_javascript,
+    # injected_javascript_data_url = env_javascript,
 )
 
 jhub_session.session = Pluto.ServerSession(;
