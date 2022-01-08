@@ -17,6 +17,6 @@ run(`cp $tarfile ./sysimg.tar.gz`)
 run(`./install.sh`)
 runjl = joinpath(@__DIR__, "./run.jl")
 
-cd(oldpwd)
 run(`/tmp/julia/bin/julia -J ./js_sysimg/JuliaSimSysimg_0.3.3.so $runjl`)
+cd(oldpwd)
 
