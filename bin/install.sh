@@ -1,5 +1,8 @@
 #!/bin/env bash
+cd $1
 set -ex
+
+ls -alh
 # 
 # tar xvf ./sysimg.tar.gz
 rm -rf /tmp/julia
@@ -12,7 +15,7 @@ mv ~/.julia ~/.julia-bk
 /tmp/julia/bin/julia -e 'using Pkg; Pkg.resolve()'
 rm -rf  ~/.julia/artifacts
 pwd
-ls
+ls -alh
 cp -r js_sysimg/artifacts ~/.julia/
 cp -r js_sysimg/PinnedProject/* ~/.julia/environments/v1.6/
 cp -r js_sysimg/SrclessPackages/* /tmp/julia/share/julia/stdlib/v1.6/

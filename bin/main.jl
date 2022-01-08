@@ -13,14 +13,15 @@ headers = Dict("Authorization" => "Bearer $(APIKEY)")
 tarfile = Downloads.download(ARTIFACT_URL; headers=headers)
 @info tarfile
 oldpwd = pwd()
-cd(@__DIR__)
+cwd = @__DIR__
+cd(cwd)
 run(`cp $tarfile ./sysimg.tar.gz`)
 run(`tar xf ./sysimg.tar.gz`)
 
 @info readdir(".")
 @info readdir("./js_sysimg")
 
-run(`./install.sh`)
+run(`./install.sh $cwd`)
 runjl = joinpath(@__DIR__, "./run.jl")
 
 run(`/tmp/julia/bin/julia -J ./js_sysimg/JuliaSimSysimg_0.3.3.so $runjl`)
