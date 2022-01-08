@@ -1,5 +1,5 @@
 
-using Pkg
+# using Pkg # Already uses Pkg
 # Pkg.develop(PackageSpec(path="/opt/juliahub/packages/Pluto"))
 
 try
