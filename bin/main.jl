@@ -14,7 +14,8 @@ tarfile = Downloads.download(ARTIFACT_URL; headers=headers)
 @info tarfile
 oldpwd = pwd()
 cd(@__DIR__)
-run(`cp $tarfile ./sysimg.tar.gz && tar xvf ./sysimg.tar.gz`)
+run(`cp $tarfile ./sysimg.tar.gz`)
+run(`tar xvf ./sysimg.tar.gz`)
 
 @info readdir(".")
 
