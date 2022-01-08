@@ -8,7 +8,7 @@ ARTIFACT_URL = get(ENV, "ARTIFACT_URL", ARTIFACT_URL)
 # buildkite API Key
 headers = Dict("Authorization" => "Bearer $(APIKEY)")
 
-# progress = (b,a) -> print("\r$(a/b)%                                           ")
+progress = (b,a) -> print("\r$(a/b)%                                           ")
 # tarfile = joinpath(@__DIR__, "../JuliaSimSysimg_0.3.3.tar.gz")
 tarfile = Downloads.download(ARTIFACT_URL; headers=headers, progress=progress)
 oldpwd = pwd()
