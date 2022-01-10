@@ -1,1 +1,1 @@
-@info "Placeholder!"
+module JuliaHubPlutoApp end
