@@ -11,7 +11,7 @@ catch e
 end
 
 Pkg.add([
-    Pkg.PackageSpec(name = "Pluto", version = "0.17.5"),
+    Pkg.PackageSpec(name = "Pluto", version = "0.17.7"),
     Pkg.PackageSpec(name = "JSON", version = "0.21"),
     Pkg.PackageSpec(name = "HTTP", version = "0.9.17"),
 ])
