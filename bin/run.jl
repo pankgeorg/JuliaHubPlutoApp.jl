@@ -2,6 +2,13 @@ host = ARGS[1]
 port = parse(Int, ARGS[2])
 # using Pkg # Already uses Pkg
 # Pkg.develop(PackageSpec(path="/opt/juliahub/packages/Pluto"))
+# Code that can be added
+
+
+
+# Keep editing! 
+# Wow so automatic
+
 
 try
     # Resolve explodes, but that's okey right? :) 
